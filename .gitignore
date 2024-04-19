@@ -365,3 +365,13 @@ FodyWeavers.xsd
 # Ignore log files
 logs/
 internal_logs/
+
+# azurite related storage
+_blobstorage_/
+_queuestorage_/
+
+_azurite_db_blob_.json
+_azurite_db_blob_extent_.json
+_azurite_db_queue_.json
+_azurite_db_queue_extent_.json
+_azurite_db_table_.json
