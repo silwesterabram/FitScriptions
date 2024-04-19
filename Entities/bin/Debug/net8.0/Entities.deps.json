@@ -9,7 +9,8 @@
       "Entities/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
-          "Microsoft.EntityFrameworkCore.Tools": "8.0.4"
+          "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
+          "QRCoder": "1.4.3"
         },
         "runtime": {
           "Entities.dll": {}
@@ -487,6 +488,14 @@
           }
         }
       },
+      "QRCoder/1.4.3": {
+        "runtime": {
+          "lib/net6.0/QRCoder.dll": {
+            "assemblyVersion": "1.4.3.0",
+            "fileVersion": "1.4.3.0"
+          }
+        }
+      },
       "System.CodeDom/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -796,6 +805,13 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "QRCoder/1.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fWuFqjm8GTlEb2GqBl3Hi8HZZeZQwBSHxvRPtPjyNbT82H0ff0JwavKRBmMaXCno1Av6McPC8aJzri0Mj2w9Jw==",
+      "path": "qrcoder/1.4.3",
+      "hashPath": "qrcoder.1.4.3.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",

@@ -10,7 +10,8 @@
         "dependencies": {
           "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
-          "NLog.Extensions.Logging": "5.3.8"
+          "NLog.Extensions.Logging": "5.3.8",
+          "QRCoder": "1.4.3"
         },
         "runtime": {
           "Contracts.dll": {}
@@ -509,6 +510,14 @@
           }
         }
       },
+      "QRCoder/1.4.3": {
+        "runtime": {
+          "lib/net6.0/QRCoder.dll": {
+            "assemblyVersion": "1.4.3.0",
+            "fileVersion": "1.4.3.0"
+          }
+        }
+      },
       "System.CodeDom/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -610,7 +619,8 @@
       "System.Threading.Channels/6.0.0": {},
       "Entities/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
+          "QRCoder": "1.4.3"
         },
         "runtime": {
           "Entities.dll": {}
@@ -840,6 +850,13 @@
       "sha512": "sha512-6VD0lyeokWltL6j8lO7mS7v7lbuO/qn0F7kdvhKhEx1JvFyD39nzohOK3JvkVh4Nn3mrcMDCyDxvTvmiW55jQg==",
       "path": "nlog.extensions.logging/5.3.8",
       "hashPath": "nlog.extensions.logging.5.3.8.nupkg.sha512"
+    },
+    "QRCoder/1.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fWuFqjm8GTlEb2GqBl3Hi8HZZeZQwBSHxvRPtPjyNbT82H0ff0JwavKRBmMaXCno1Av6McPC8aJzri0Mj2w9Jw==",
+      "path": "qrcoder/1.4.3",
+      "hashPath": "qrcoder.1.4.3.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",

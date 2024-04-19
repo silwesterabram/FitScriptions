@@ -63,6 +63,10 @@
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[5.3.8, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
             }
           },
           "imports": [
@@ -140,6 +144,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
             }
           },
           "imports": [
@@ -221,6 +229,10 @@
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[5.3.8, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
             }
           },
           "imports": [
@@ -300,6 +312,10 @@
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
             }
           },
           "imports": [
@@ -385,6 +401,10 @@
               "target": "Package",
               "version": "[12.19.1, )"
             },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[7.1.2, )"
@@ -455,6 +475,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -467,6 +501,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -8,9 +8,9 @@ C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.Ge
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.AssemblyInfoInputs.cache
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.AssemblyInfo.cs
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.csproj.CoreCompileInputs.cache
+C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.sourcelink.json
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service..DEC3DE55.Up2Date
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.dll
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\refint\Service.Contracts.dll
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.pdb
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\ref\Service.Contracts.dll
-C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.sourcelink.json

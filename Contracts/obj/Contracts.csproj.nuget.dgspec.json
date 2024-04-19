@@ -63,6 +63,10 @@
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[5.3.8, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
             }
           },
           "imports": [
@@ -140,6 +144,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
             }
           },
           "imports": [

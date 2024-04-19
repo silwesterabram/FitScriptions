@@ -5,5 +5,6 @@
         IGymService GymService { get; }
         ISubscriptionTypeService SubscriptionTypeService { get; }
         IAuthenticationService AuthenticationService { get; }
+        IProfileService ProfileService { get; }
     }
 }

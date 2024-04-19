@@ -9,7 +9,11 @@
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 	<ItemGroup>
+	  <PackageReference Include="QRCoder" Version="1.4.3" />
+	</ItemGroup>
+	<ItemGroup>
 	  <ProjectReference Include="..\Service.Contracts\Service.Contracts.csproj" />
+	  <ProjectReference Include="..\Service\Service.csproj" />
 	</ItemGroup>
 
 </Project>

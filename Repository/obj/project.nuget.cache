@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "n839hY9lcsb+qd6bLDV69rR769BQiUV1cXixwyt8ZRTfJjq/GsywA5PHlj0GfRab9y1VO5Hbq0CBgArjvW5aDg==",
+  "dgSpecHash": "FkG1Fb9/2f5n/UXvkRznYIISkwl9pHl5/C5fPGaSi4A552upZML4tFlU1QLjwkrEJmhWGDVV8/0D0K7PWge5oA==",
   "success": true,
   "projectFilePath": "C:\\FitScriptions_project\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "C:\\Users\\szilv\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\szilv\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512",
     "C:\\Users\\szilv\\.nuget\\packages\\nlog.extensions.logging\\5.3.8\\nlog.extensions.logging.5.3.8.nupkg.sha512",
+    "C:\\Users\\szilv\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\szilv\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\szilv\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\szilv\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",

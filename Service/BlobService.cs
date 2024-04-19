@@ -71,5 +71,25 @@ namespace Service
 
             return blobClient.Uri.ToString();
         }
+
+        public async Task<string> UploadFileAsync(byte[] file, string containerName, string fileName)
+        {
+            var container = _blobClient.GetBlobContainerClient(containerName);
+
+            if (!await container.ExistsAsync())
+                await container.CreateAsync(PublicAccessType.Blob);
+
+            if (file is null || file.Length == 0)
+                throw new BlobFileNullException("File is null or empty");
+
+            var blobClient = _blobClient.GetBlobContainerClient(containerName).GetBlobClient(fileName);
+
+            using (var stream = new MemoryStream(file))
+            {
+                await blobClient.UploadAsync(stream, true);
+            }
+
+            return blobClient.Uri.ToString();
+        }
     }
 }
