@@ -15,3 +15,4 @@ C:\FitScriptions_project\FitScriptions.Presentation\obj\Debug\net8.0\FitScriptio
 C:\FitScriptions_project\FitScriptions.Presentation\obj\Debug\net8.0\refint\FitScriptions.Presentation.dll
 C:\FitScriptions_project\FitScriptions.Presentation\obj\Debug\net8.0\FitScriptions.Presentation.pdb
 C:\FitScriptions_project\FitScriptions.Presentation\obj\Debug\net8.0\ref\FitScriptions.Presentation.dll
+C:\FitScriptions_project\FitScriptions.Presentation\obj\Debug\net8.0\FitScriptions.Presentation.sourcelink.json
