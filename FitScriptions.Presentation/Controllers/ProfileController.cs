@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Service;
 using Service.Contracts;
 using Shared.DataTransferObjects;
+using Shared.Exceptions;
 
 namespace FitScriptions.Presentation.Controllers
 {
@@ -20,6 +21,27 @@ namespace FitScriptions.Presentation.Controllers
             var connectionString = configuration.GetConnectionString("AzureBlobStorageConnection");
             _blobService = new BlobService(connectionString!);
         }
+        [HttpGet]
+        public IActionResult GetAllProfiles()
+        {
+            var profiles = _service.ProfileService.GetAllProfiles();
+            return Ok(profiles);
+        }
+
+        [HttpGet("{userId:guid}")]
+        public async Task<IActionResult> GetProfile(Guid userId)
+        {
+            var profile = await _service.ProfileService.GetProfileAsync(userId);
+            return Ok(profile);
+        }
+
+        [HttpPut("{userId:guid}")]
+        public async Task<IActionResult> UpdateProfile(Guid userId, [FromBody] ProfileForUpdateDto profileForUpdateDto)
+        {
+            await _service.ProfileService.UpdateProfile(userId, profileForUpdateDto);
+            return NoContent();
+        }
+
 
         [HttpPut("{userId:guid}/update-picture")]
         public async Task<IActionResult> UpdateProfilePicture(Guid userId, [FromForm] IFormFile file)
@@ -67,6 +89,27 @@ namespace FitScriptions.Presentation.Controllers
 
             await _service.ProfileService.SaveProfileQRCodeUri(userId, newQrCodeUri);
             return Ok(newQrCodeUri);
+        }
+
+        [HttpDelete("{userId:guid}/delete-qr")]
+        public async Task<IActionResult> DeleteProfileQRCode(Guid userId)
+        {
+            var currentQrCodeUri = await _service.ProfileService.GetQRCodeUriAsync(userId);
+            if (currentQrCodeUri == "")
+                throw new QRCodeNotFoundException($"There is no active QR code at user with id {userId}");
+
+            string fileName = Shared.Helpers.ImageUrlLogic.ExtractFileNameFromProfilePictureUri(currentQrCodeUri!);
+
+            await _blobService.DeleteFileAsync(fileName, userId.ToString());
+            await _service.ProfileService.SaveProfileQRCodeUri(userId, "");
+            return NoContent();
+        }
+
+        [HttpDelete("{userId:guid}")]
+        public async Task<IActionResult> DeleteProfile(Guid userId)
+        {
+            await _service.ProfileService.DeleteProfile(userId);
+            return NoContent();
         }
     }
 }

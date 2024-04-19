@@ -31,7 +31,47 @@ namespace FitScriptions.Middleware
                 _logger.LogError($"Request failed on {nameof(GymNotFoundException)} with error {ex.Message} causing error code:{StatusCodes.Status404NotFound}");
                 await HandleExceptionAsync(httpContext, StatusCodes.Status404NotFound, ex.Message);
             }
-                catch (Exception ex)
+            catch (BlobFileFormatException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(BlobFileFormatException)} with error {ex.Message} causing error code:{StatusCodes.Status400BadRequest}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status400BadRequest, ex.Message);
+            }
+            catch (BlobFileNullException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(BlobFileNullException)} with error {ex.Message} causing error code:{StatusCodes.Status400BadRequest}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status400BadRequest, ex.Message);
+            }
+            catch (BlobFileSizeException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(BlobFileSizeException)} with error {ex.Message} causing error code:{StatusCodes.Status400BadRequest}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status400BadRequest, ex.Message);
+            }
+            catch (BlobNameNotFoundException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(BlobNameNotFoundException)} with error {ex.Message} causing error code:{StatusCodes.Status404NotFound}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status404NotFound, ex.Message);
+            }
+            catch (CreationListParameterException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(CreationListParameterException)} with error {ex.Message} causing error code:{StatusCodes.Status400BadRequest}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status400BadRequest, ex.Message);
+            }
+            catch (QRCodeNotFoundException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(QRCodeNotFoundException)} with error {ex.Message} causing error code:{StatusCodes.Status404NotFound}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status404NotFound, ex.Message);
+            }
+            catch (SubscriptionTypeNotFoundException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(SubscriptionTypeNotFoundException)} with error {ex.Message} causing error code:{StatusCodes.Status404NotFound}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status404NotFound, ex.Message);
+            }
+            catch (UserNotFoundException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(UserNotFoundException)} with error {ex.Message} causing error code:{StatusCodes.Status404NotFound}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status404NotFound, ex.Message);
+            }
+            catch (Exception ex)
             {
                 _logger.LogError($"Request failed on {nameof(Exception)} with error {ex.Message} causing error code:{StatusCodes.Status500InternalServerError}");
                 await HandleExceptionAsync(httpContext, StatusCodes.Status500InternalServerError, ex.Message);
