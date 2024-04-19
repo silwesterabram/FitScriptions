@@ -12,6 +12,7 @@ builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLoggingService();
 builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
+builder.Services.ConfigureJWT(builder.Configuration);
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManger();
 builder.Services.ConfigureSqlContext(builder.Configuration);

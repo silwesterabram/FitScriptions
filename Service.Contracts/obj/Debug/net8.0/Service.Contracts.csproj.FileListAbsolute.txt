@@ -13,3 +13,4 @@ C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.dl
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\refint\Service.Contracts.dll
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.pdb
 C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\ref\Service.Contracts.dll
+C:\FitScriptions_project\Service.Contracts\obj\Debug\net8.0\Service.Contracts.sourcelink.json

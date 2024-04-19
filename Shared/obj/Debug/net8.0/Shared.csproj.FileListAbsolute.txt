@@ -9,3 +9,4 @@ C:\FitScriptions_project\Shared\obj\Debug\net8.0\Shared.dll
 C:\FitScriptions_project\Shared\obj\Debug\net8.0\refint\Shared.dll
 C:\FitScriptions_project\Shared\obj\Debug\net8.0\Shared.pdb
 C:\FitScriptions_project\Shared\obj\Debug\net8.0\ref\Shared.dll
+C:\FitScriptions_project\Shared\obj\Debug\net8.0\Shared.sourcelink.json
