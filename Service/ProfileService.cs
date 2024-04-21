@@ -34,10 +34,11 @@ namespace Service
             QRCodeGenerator qRCodeGenerator = new QRCodeGenerator();
             QRCodeData qRCodeData = 
                 qRCodeGenerator.CreateQrCode(
-                    $"{profileEntity.UserName}\n" +
-                    $"{profileEntity.IdCardNumber}\n" +
-                    $"{profileEntity.PhoneNumber}\n" +
-                    $"{profileEntity.Email}", 
+                    $"userId={profileEntity.Id}\n" +
+                    $"userName={profileEntity.UserName}\n" +
+                    $"idCard={profileEntity.IdCardNumber}\n" +
+                    $"phone={profileEntity.PhoneNumber}\n" +
+                    $"email={profileEntity.Email}", 
                     QRCodeGenerator.ECCLevel.Q);
             var qrCode = new PngByteQRCode(qRCodeData);
             var qrCodeImage = qrCode.GetGraphic(20);

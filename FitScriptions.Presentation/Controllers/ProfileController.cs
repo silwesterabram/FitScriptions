@@ -21,6 +21,7 @@ namespace FitScriptions.Presentation.Controllers
             var connectionString = configuration.GetConnectionString("AzureBlobStorageConnection");
             _blobService = new BlobService(connectionString!);
         }
+
         [HttpGet]
         public IActionResult GetAllProfiles()
         {
@@ -50,7 +51,7 @@ namespace FitScriptions.Presentation.Controllers
 
             if (currentProfileUri != "")
             {
-                string fileName = Shared.Helpers.ImageUrlLogic.ExtractFileNameFromProfilePictureUri(currentProfileUri!);
+                string fileName = Shared.Helpers.ImageUrlLogic.ExtractFileNameFromImageUri(currentProfileUri!);
                 await _blobService.DeleteFileAsync(fileName, userId.ToString());
             }
 
@@ -67,7 +68,7 @@ namespace FitScriptions.Presentation.Controllers
             if (currentProfilePictureUrl == "")
                 throw new ProfilePictureNotFoundException($"There is no active profile picture at user with id {userId}");
 
-            string fileName = Shared.Helpers.ImageUrlLogic.ExtractFileNameFromProfilePictureUri(currentProfilePictureUrl!);
+            string fileName = Shared.Helpers.ImageUrlLogic.ExtractFileNameFromImageUri(currentProfilePictureUrl!);
 
             await _blobService.DeleteFileAsync(fileName, userId.ToString());
             await _service.ProfileService.SaveProfilePictureUri(userId, "");
@@ -80,7 +81,7 @@ namespace FitScriptions.Presentation.Controllers
             var currentQrCodeUri = await _service.ProfileService.GetQRCodeUriAsync(userId);
             if (currentQrCodeUri != "")
             {
-                string fileName = Shared.Helpers.ImageUrlLogic.ExtractFileNameFromProfilePictureUri(currentQrCodeUri!);
+                string fileName = Shared.Helpers.ImageUrlLogic.ExtractFileNameFromImageUri(currentQrCodeUri!);
                 await _blobService.DeleteFileAsync(fileName, userId.ToString());
             }
 
@@ -98,7 +99,7 @@ namespace FitScriptions.Presentation.Controllers
             if (currentQrCodeUri == "")
                 throw new QRCodeNotFoundException($"There is no active QR code at user with id {userId}");
 
-            string fileName = Shared.Helpers.ImageUrlLogic.ExtractFileNameFromProfilePictureUri(currentQrCodeUri!);
+            string fileName = Shared.Helpers.ImageUrlLogic.ExtractFileNameFromImageUri(currentQrCodeUri!);
 
             await _blobService.DeleteFileAsync(fileName, userId.ToString());
             await _service.ProfileService.SaveProfileQRCodeUri(userId, "");

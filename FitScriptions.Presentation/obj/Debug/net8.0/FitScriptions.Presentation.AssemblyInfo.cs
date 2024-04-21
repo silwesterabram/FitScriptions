@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FitScriptions.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22bd5fda7d2ef11b9c67961516b3c52d43950a1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b21f65053eac4e5c21f6cbf0e109fcbcd39dbb6")]
 [assembly: System.Reflection.AssemblyProductAttribute("FitScriptions.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FitScriptions.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

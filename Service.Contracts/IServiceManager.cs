@@ -6,5 +6,6 @@
         ISubscriptionTypeService SubscriptionTypeService { get; }
         IAuthenticationService AuthenticationService { get; }
         IProfileService ProfileService { get; }
+        IUserSubscriptionService UserSubscriptionService { get; }
     }
 }

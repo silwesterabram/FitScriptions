@@ -71,6 +71,11 @@ namespace FitScriptions.Middleware
                 _logger.LogError($"Request failed on {nameof(UserNotFoundException)} with error {ex.Message} causing error code:{StatusCodes.Status404NotFound}");
                 await HandleExceptionAsync(httpContext, StatusCodes.Status404NotFound, ex.Message);
             }
+            catch (UserSubscriptionNotFoundException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(UserSubscriptionNotFoundException)} with error {ex.Message} causing error code:{StatusCodes.Status404NotFound}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status404NotFound, ex.Message);
+            }
             catch (Exception ex)
             {
                 _logger.LogError($"Request failed on {nameof(Exception)} with error {ex.Message} causing error code:{StatusCodes.Status500InternalServerError}");
