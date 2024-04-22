@@ -13,6 +13,7 @@ namespace Service
         private readonly Lazy<IAuthenticationService> _authenticationService;
         private readonly Lazy<IProfileService> _profileService;
         private readonly Lazy<IUserSubscriptionService> _userSubscriptionService;
+        private readonly Lazy<IGymEntranceService> _gymEntranceService;
 
         public ServiceManager(
             IRepositoryManager repositoryManager, 
@@ -25,6 +26,7 @@ namespace Service
             _authenticationService = new Lazy<IAuthenticationService>(() => new AuthenticationService(loggerManager, userManager, configuration));
             _profileService = new Lazy<IProfileService>(() => new ProfileService(userManager));
             _userSubscriptionService = new Lazy<IUserSubscriptionService>(() => new UserSubscriptionService(repositoryManager, userManager));
+            _gymEntranceService = new Lazy<IGymEntranceService>(() => new GymEntranceService(repositoryManager, userManager));
         }
 
         public IGymService GymService => _gymService.Value;
@@ -32,5 +34,6 @@ namespace Service
         public IAuthenticationService AuthenticationService => _authenticationService.Value;
         public IProfileService ProfileService => _profileService.Value;
         public IUserSubscriptionService UserSubscriptionService => _userSubscriptionService.Value;
+        public IGymEntranceService GymEntranceService => _gymEntranceService.Value;
     }
 }

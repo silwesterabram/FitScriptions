@@ -7,5 +7,6 @@
         IAuthenticationService AuthenticationService { get; }
         IProfileService ProfileService { get; }
         IUserSubscriptionService UserSubscriptionService { get; }
+        IGymEntranceService GymEntranceService { get; }
     }
 }

@@ -76,6 +76,21 @@ namespace FitScriptions.Middleware
                 _logger.LogError($"Request failed on {nameof(UserSubscriptionNotFoundException)} with error {ex.Message} causing error code:{StatusCodes.Status404NotFound}");
                 await HandleExceptionAsync(httpContext, StatusCodes.Status404NotFound, ex.Message);
             }
+            catch (GymEntranceNotFoundException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(GymEntranceNotFoundException)} with error {ex.Message} causing error code:{StatusCodes.Status404NotFound}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status404NotFound, ex.Message);
+            }
+            catch (IncorrectUserSubscriptionToGymCorrespondenceException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(IncorrectUserSubscriptionToGymCorrespondenceException)} with error {ex.Message} causing error code:{StatusCodes.Status409Conflict}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status409Conflict, ex.Message);
+            }
+            catch (NoActiveSubscriptionsException ex)
+            {
+                _logger.LogError($"Request failed on {nameof(NoActiveSubscriptionsException)} with error {ex.Message} causing error code:{StatusCodes.Status409Conflict}");
+                await HandleExceptionAsync(httpContext, StatusCodes.Status409Conflict, ex.Message);
+            }
             catch (Exception ex)
             {
                 _logger.LogError($"Request failed on {nameof(Exception)} with error {ex.Message} causing error code:{StatusCodes.Status500InternalServerError}");
